@@ -86,7 +86,7 @@ class _LoginPageState extends State<LoginPage> {
     final name = _nameController.text.trim();
 
     try {
-      UserCredential userCredential = await FirebaseAuth.instance
+      await FirebaseAuth.instance
           .signInWithEmailAndPassword(email: email, password: password);
 
       SharedPreferences prefs = await SharedPreferences.getInstance();
